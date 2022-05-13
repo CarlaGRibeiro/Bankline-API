@@ -1,7 +1,6 @@
 package models;
 
 public enum TipoMovimentacao {
-	RECEITA,
-	DESPESA
-	
+	RECEITA, DESPESA
+
 }
