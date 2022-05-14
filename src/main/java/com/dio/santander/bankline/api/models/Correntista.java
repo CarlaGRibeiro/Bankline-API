@@ -1,4 +1,4 @@
-package models;
+package com.dio.santander.bankline.api.models;
 
 import javax.persistence.Column;
 import javax.persistence.Embedded;
@@ -8,18 +8,19 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
 @Entity
 @Table(name = "correntista")
 public class Correntista {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-
-	@Column(length = 15, nullable = false)
+	@Column
 	private String cpf;
-	@Column(length = 70, nullable = false)
+	@Column
 	private String nome;
-
+	
 	@Embedded
 	private Conta conta;
 
@@ -54,5 +55,4 @@ public class Correntista {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-
 }
